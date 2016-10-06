@@ -1,7 +1,7 @@
 output "id" {
-  value = "${aws_vpc.mod_vpc.id}"
+  value = "${aws_vpc.vpc.id}"
 }
 
 output "cidr" {
-  value = "${aws_vpc.mod_vpc.cidr_block}"
+  value = "${aws_vpc.vpc.cidr_block}"
 }

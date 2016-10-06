@@ -1,4 +1,4 @@
-resource "aws_vpc" "mod_vpc" {
+resource "aws_vpc" "vpc" {
   cidr_block = "${var.cidr}"
   tags {
     Name = "${var.environment}-vpc"
