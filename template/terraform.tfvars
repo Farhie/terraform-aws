@@ -14,3 +14,5 @@ subnet_private_1a = "10.100.3.0/24"
 subnet_private_1b = "10.100.4.0/24"
 
 subnet_private_1c = "10.100.5.0/24"
+
+multi_availability_zones = "0"

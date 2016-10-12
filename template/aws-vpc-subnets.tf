@@ -11,6 +11,7 @@ resource "aws_subnet" "subnet-public-1a" {
 }
 
 resource "aws_subnet" "subnet-public-1b" {
+  count = "${var.multi_availability_zones}"
   vpc_id = "${module.vpc.id}"
   cidr_block = "${var.subnet_public_1b}"
   availability_zone = "eu-west-1b"
@@ -23,6 +24,7 @@ resource "aws_subnet" "subnet-public-1b" {
 }
 
 resource "aws_subnet" "subnet-public-1c" {
+  count = "${var.multi_availability_zones}"
   vpc_id = "${module.vpc.id}"
   cidr_block = "${var.subnet_public_1c}"
   availability_zone = "eu-west-1c"
@@ -47,6 +49,7 @@ resource "aws_subnet" "subnet-private-1a" {
 }
 
 resource "aws_subnet" "subnet-private-1b" {
+  count = "${var.multi_availability_zones}"
   vpc_id = "${module.vpc.id}"
   cidr_block = "${var.subnet_private_1b}"
   availability_zone = "eu-west-1b"
@@ -59,6 +62,7 @@ resource "aws_subnet" "subnet-private-1b" {
 }
 
 resource "aws_subnet" "subnet-private-1c" {
+  count = "${var.multi_availability_zones}"
   vpc_id = "${module.vpc.id}"
   cidr_block = "${var.subnet_private_1c}"
   availability_zone = "eu-west-1c"

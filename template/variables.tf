@@ -37,3 +37,8 @@ variable "subnet_private_1c" {
   description = "subnet private in zone 1c"
   default = "10.100.5.0/24"
 }
+
+variable "multi_availability_zones" {
+  description = "boolean defining whether infra should be multi AZ"
+  default = "0"
+}
