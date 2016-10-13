@@ -7,3 +7,7 @@ variable "availability_zones" {
   description = "List of availability zones to deploy into"
   type = "list"
 }
+
+variable "vpc_id" { }
+
+variable "environment" { }
