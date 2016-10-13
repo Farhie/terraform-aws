@@ -1,5 +1,5 @@
 module "aws_nat_gateways" "nat-gateways" {
-  source = "../modules/aws-nat-gateway"
+  source = "../modules/aws-vpc-nat-gateway"
 
   vpc_id = "${module.vpc.vpc_id}"
   environment = "${var.environment}"
