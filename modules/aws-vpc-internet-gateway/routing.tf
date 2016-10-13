@@ -13,7 +13,7 @@ resource "aws_route_table" "public-route-table" {
   }
 }
 
-resource "aws_route_table_association" "public-rt-assosiation-1a" {
+resource "aws_route_table_association" "public-route-assosiation" {
   count = "${length(var.availability_zones)}"
   subnet_id = "${element(var.public_subnet_ids, count)}"
   route_table_id = "${aws_route_table.public-route-table.id}"
