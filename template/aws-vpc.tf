@@ -1,5 +1,5 @@
 module "vpc" {
-  source = "../modules-template/aws-vpc"
+  source = "../modules/aws-vpc"
 
   name = "${var.environment}-vpc"
   environment = "${var.environment}"
