@@ -42,3 +42,21 @@ variable "multi_availability_zones" {
   description = "boolean defining whether infra should be multi AZ"
   default = "0"
 }
+
+variable "availability_zones" {
+  description = "List of availability zones to deploy into"
+  type = "list"
+  default = ["none-existent-region"]
+}
+
+variable "public_subnet_cidrs" {
+  description = "List of public subnet CIDRs"
+  type = "list"
+  default = ["none-existent-cidr"]
+}
+
+variable "private_subnet_cidrs" {
+  description = "List of private subnet CIDRs"
+  type = "list"
+  default = ["none-existent-cidr"]
+}

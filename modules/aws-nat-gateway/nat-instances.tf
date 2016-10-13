@@ -1,4 +1,5 @@
 resource "aws_nat_gateway" "nat-gateway" {
-  allocation_id = "${elastic-ip-nat}"
-  subnet_id = "${var.public_subnet_id}"
+  count = "${length(var.availability_zones)}"
+  allocation_id = "${element(aws_eip.elastic-ips.*.id, count.index)}"
+  subnet_id = "${element(public_subnet_ids, count.index)}"
 }

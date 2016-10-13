@@ -1,3 +1,4 @@
-resource "aws_eip" "elastic-ip-nat" {
+resource "aws_eip" "elastic-ips" {
+  count = "${length(var.availability_zones)}"
   vpc = "true"
 }
