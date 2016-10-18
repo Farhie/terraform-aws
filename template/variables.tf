@@ -60,3 +60,27 @@ variable "private_subnet_cidrs" {
   type = "list"
   default = ["none-existent-cidr"]
 }
+
+variable "aws_ami_id" {
+  description = "default AWS AMI to use"
+}
+
+variable "instance_type" {
+  default = "t2.medium"
+}
+
+variable "asg_scaling_to_zero_instances_out_of_hours" {
+  description = "If set to '1' it will scale ASG to 0 instances overnight."
+  default = "0"
+}
+
+variable "test_app_count" {
+  description = "flag to indicate whether to create this resource"
+  default = "0"
+}
+
+variable "test_app_minimum_number_of_instances" { }
+
+variable "test_app_maximum_number_of_instances" { }
+
+variable "test_app_desired_number_of_instances" { }
